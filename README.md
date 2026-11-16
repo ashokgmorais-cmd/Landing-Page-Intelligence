@@ -120,7 +120,7 @@ A comprehensive 12-module assessment of the Jones Gym website, covering:
 - Mobile Experience and Accessibility.
 - Strategic Recommendations and Optimisation Roadmap.
 
-**[View the Complete Jones Gym Audit (PDF)](examples/Jones-Gym-Complete-Landing-Page-Audit.pdf)**
+**[View the Complete Jones Gym Audit (PDF)](examples/Jones%20Gym%20Complete%20Landing%20Page%20Audit%20%2812%20Modules%29.pdf)**
 
 This example demonstrates how the framework identifies conversion barriers, evaluates available evidence and translates findings into actionable recommendations.
 
