@@ -106,6 +106,24 @@ The skill may request missing essential information before beginning the audit.
 
 If the page cannot be accessed, provide screenshots, a screen recording or exported page content. Findings must be limited to the evidence available.
 
+## Sample Audit
+
+Explore a real-world landing page audit generated using the Landing Page Intelligence framework.
+
+### Jones Gym – Complete Landing Page Audit
+
+A comprehensive 12-module assessment of the Jones Gym website, covering:
+
+- User Experience and Conversion Rate Optimisation.
+- Content, Copywriting and Calls to Action.
+- Trust, Credibility and Value Proposition.
+- Mobile Experience and Accessibility.
+- Strategic Recommendations and Optimisation Roadmap.
+
+**[View the Complete Jones Gym Audit (PDF)](examples/Jones-Gym-Complete-Landing-Page-Audit.pdf)**
+
+This example demonstrates how the framework identifies conversion barriers, evaluates available evidence and translates findings into actionable recommendations.
+
 ## Evidence-Based Scoring
 
 The framework uses a diagnostic scoring methodology.
