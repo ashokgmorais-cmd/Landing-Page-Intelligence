@@ -1,88 +1,201 @@
 # Landing Page Intelligence
 
-A collection of Claude skills for evidence-based landing-page audits, adapted from the **Landing Page Intelligence — Universal 12-Module Landing Page Audit Master Prompt** supplied with this project.
+### Turn landing pages into conversion opportunities through evidence-based AI audits.
 
-Use any of the 12 module skills independently, or use the additional `complete-audit` skill to perform all 12 modules in one run and produce a consolidated report.
+**Landing Page Intelligence** is an open-source collection of AI-powered Claude Agent Skills designed to evaluate landing pages systematically across 12 critical dimensions of user experience, conversion optimisation, messaging, credibility and performance.
 
-## Repository structure
+Instead of relying on generic AI feedback, these skills follow a structured audit methodology that distinguishes observable evidence, business claims, interpretations, hypotheses and actionable recommendations.
+
+Whether you are a digital marketer, CRO specialist, business owner, agency, or developer, Landing Page Intelligence helps you identify what is working, what is not, and what should be improved.
+
+---
+
+## Why Landing Page Intelligence?
+
+A landing page can look attractive and still fail to convert.
+
+Poor messaging, unclear offers, weak calls to action, missing trust signals and unnecessary friction can prevent visitors from taking action.
+
+Landing Page Intelligence approaches this problem through a structured 12-module audit framework.
+
+**The objective is simple: move beyond surface-level feedback and produce practical, prioritised recommendations.**
+
+## What Can You Audit?
+
+The framework evaluates landing pages across these 12 dimensions:
+
+| # | Audit Module | What It Evaluates |
+|---|---|---|
+| 01 | UX Audit | Navigation, information architecture, hierarchy, readability and visitor journey |
+| 02 | CRO Audit | Conversion goals, friction, forms, objections and decision barriers |
+| 03 | Content & Copywriting | Headlines, messaging, benefits, persuasion and content structure |
+| 04 | CTA Audit | CTA wording, placement, hierarchy, visibility and destinations |
+| 05 | Trust & Credibility | Testimonials, credentials, proof, transparency and risk reversal |
+| 06 | Mobile Experience | Responsive layout, mobile usability, readability and touch interactions |
+| 07 | Performance | Page speed evidence, Core Web Vitals and technical performance risks |
+| 08 | Competitor Benchmarking | Comparative positioning, offers, messaging and conversion experiences |
+| 09 | Offer & Value Proposition | Offer clarity, audience fit, perceived value and differentiation |
+| 10 | Message Match | Alignment between advertising, traffic sources and landing-page messaging |
+| 11 | Accessibility | Inclusive usability and accessibility considerations using WCAG 2.2 as a reference |
+| 12 | Strategic Recommendations | Prioritisation, experimentation and a practical 30-day optimisation roadmap |
+
+## Two Ways to Use the Framework
+
+### 1. Individual Audit Skills
+
+The repository contains 12 standalone skills. Each can be used independently to investigate a specific landing-page dimension.
+
+Use an individual skill when you need a focused assessment, such as a CRO audit, CTA review or accessibility assessment.
+
+### 2. Complete Audit
+
+The additional `complete-audit` skill combines all 12 modules into one comprehensive landing-page audit workflow.
+
+It is independently usable and contains the complete audit methodology. You do not need to install the other 12 skills to run it.
+
+**Recommended starting point: `complete-audit`.**
+
+## Key Capabilities
+
+- Structured 12-module landing-page assessment.
+- Evidence-based findings rather than generic suggestions.
+- Diagnostic scoring on a 0–100 scale.
+- Identification of conversion barriers and usability issues.
+- Targeted headline, messaging and CTA recommendations.
+- Competitor comparisons when competitor URLs are supplied.
+- Clear distinction between observed facts, reported claims, hypotheses and recommendations.
+- Prioritised optimisation opportunities.
+- Proposed A/B testing ideas.
+- A practical 30-day optimisation roadmap.
+
+## Installation — Claude
+
+The `complete-audit` skill can be installed in Claude using its custom Skills interface.
+
+1. Download or access the repository.
+2. Navigate to `skills/complete-audit`.
+3. Package the skill folder as a ZIP file, retaining `SKILL.md` inside it.
+4. Open Claude.
+5. Navigate to **Customize → Skills**.
+6. Select **Add → Upload skill**.
+7. Upload the ZIP file and enable the skill.
+
+Once enabled, start a new conversation and request a complete landing-page audit.
+
+## How to Use
+
+Start by providing the following information:
+
+1. Landing-page URL.
+2. Business or brand name and product/service.
+3. Target audience and market.
+4. Primary conversion goal.
+5. Offer details, including pricing, guarantees and key terms where available.
+
+You can also provide optional information to improve the audit:
+
+- Advertising or campaign materials.
+- Competitor landing-page URLs.
+- Customer pain points and objections.
+- Testimonials, credentials and other trust assets.
+- Analytics and conversion data.
+- PageSpeed or Core Web Vitals reports.
+- Brand and platform constraints.
+
+The skill may request missing essential information before beginning the audit.
+
+If the page cannot be accessed, provide screenshots, a screen recording or exported page content. Findings must be limited to the evidence available.
+
+## Evidence-Based Scoring
+
+The framework uses a diagnostic scoring methodology.
+
+- Applicable audit criteria are evaluated on a 0–5 scale.
+- Module scores are expressed on a 0–100 scale.
+- Not-applicable and unevaluable criteria are excluded from the relevant denominator.
+- Unevaluated modules are disclosed rather than assigned invented scores.
+- The provisional overall score is calculated from applicable modules.
+
+Scores are diagnostic assessments, not industry benchmarks, guarantees or predictions of conversion performance.
+
+The framework does not fabricate analytics, performance measurements, customer testimonials, certifications, competitor results or research findings.
+
+## Repository Structure
 
 ```text
 landing-page-intelligence/
+│
 ├── README.md
 ├── LICENSE
 ├── CONTRIBUTING.md
+│
 └── skills/
-    ├── ux-audit/SKILL.md
-    ├── cro-audit/SKILL.md
-    ├── content-copywriting-audit/SKILL.md
-    ├── cta-audit/SKILL.md
-    ├── trust-credibility-audit/SKILL.md
-    ├── mobile-experience-audit/SKILL.md
-    ├── performance-audit/SKILL.md
-    ├── competitor-benchmarking-audit/SKILL.md
-    ├── offer-value-proposition-audit/SKILL.md
-    ├── message-match-audit/SKILL.md
-    ├── accessibility-audit/SKILL.md
-    ├── optimization-roadmap/SKILL.md
-    └── complete-audit/SKILL.md
+    ├── ux-audit/
+    ├── cro-audit/
+    ├── content-copywriting-audit/
+    ├── cta-audit/
+    ├── trust-credibility-audit/
+    ├── mobile-experience-audit/
+    ├── performance-audit/
+    ├── competitor-benchmarking-audit/
+    ├── offer-value-proposition-audit/
+    ├── message-match-audit/
+    ├── accessibility-audit/
+    ├── optimization-roadmap/
+    └── complete-audit/
 ```
 
-`complete-audit` is an additional, independent skill. It does not depend on installing the other 12 folders; it contains the full 12-module workflow itself.
+Each skill folder contains its own `SKILL.md` instructions.
 
-## Skills
+## Who Is This For?
 
-| Skill folder | Purpose |
-|---|---|
-| `ux-audit` | Navigation, structure, hierarchy, readability, cognitive load and visitor flow |
-| `cro-audit` | Conversion goals, competing actions, friction, forms, objections and conversion hypotheses |
-| `content-copywriting-audit` | Headline, message, benefits, persuasion, structure and targeted replacement copy |
-| `cta-audit` | CTA wording, hierarchy, visibility, placement, destinations and accessibility |
-| `trust-credibility-audit` | Proof, credibility, transparency, identity, privacy and risk-reversal signals |
-| `mobile-experience-audit` | Responsive layout, mobile readability, touch usability, forms and the mobile journey |
-| `performance-audit` | Measured speed evidence, Core Web Vitals and technical performance risks |
-| `competitor-benchmarking-audit` | Evidence-based comparison with competitors supplied or approved by the user |
-| `offer-value-proposition-audit` | Offer clarity, audience fit, perceived value, differentiation and risk reversal |
-| `message-match-audit` | Alignment between campaign/traffic promises and landing-page experience |
-| `accessibility-audit` | Inclusive usability review using WCAG 2.2 as a reference framework |
-| `optimization-roadmap` | Prioritization, experiments and a practical 30-day improvement plan |
-| `complete-audit` | One-run audit across all 12 modules with combined scorecard and roadmap |
-
-## Use one skill
-
-Install or copy the folder for the module you need, keeping its `SKILL.md` inside that folder. For Claude Code, copy skill folders into a personal or project skills directory:
-
-```bash
-# Personal skills
-mkdir -p ~/.claude/skills
-cp -R skills/ux-audit ~/.claude/skills/
-
-# Or project-specific skills, from your project root
-mkdir -p .claude/skills
-cp -R /path/to/landing-page-intelligence/skills/ux-audit .claude/skills/
-```
-
-Use `complete-audit` when you want all twelve modules in one Claude interaction:
-
-```bash
-cp -R skills/complete-audit ~/.claude/skills/
-```
-
-Claude product import mechanisms may vary. Where the interface offers custom skills, import the relevant skill folder using the method supported by that Claude version. You may install the 12 focused skills, the complete audit, or both.
-
-### Example full-audit request
-
-> Run a complete 12-module landing-page audit for [URL]. The business is [brand/business], the product or service is [offer], the target audience is [audience/market], and the primary conversion goal is [goal]. Please use the attached campaign/ad and competitor URLs where relevant. Analytics or performance measurements are [available/not available].
-
-The skill may ask for essential missing context before auditing. It does not require metrics the business does not have. If the URL cannot be inspected, provide screenshots, page text or a recording; conclusions must then be limited to that evidence.
-
-## Evidence and scoring principles
-
-The skills distinguish direct observations, business-reported information, hypotheses and recommendations. They do not invent conversion rates, performance metrics, testimonials, certifications, guarantees, competitor results or user research. They label untestable items and disclose the evidence method.
-
-Applicable criteria use a 0–5 diagnostic scale and module scores are expressed from 0–100. Not-applicable or unevaluable items are excluded from the denominator; the full audit discloses any unevaluated modules and excludes them from the provisional overall average. Scores are diagnostic interpretations, not industry benchmarks or promises of business outcomes.
-
-The full-audit skill includes a scorecard, detailed findings for all modules, targeted copy suggestions, competitor analysis when sources are supplied, consolidated priorities, three proposed experiments, a 30-day roadmap and a final consultant verdict. It does not promise conversion uplift. If testing feasibility is unclear or traffic is low, it recommends suitable qualitative validation.
+- Digital marketing professionals.
+- Conversion Rate Optimisation specialists.
+- SEO and content strategists.
+- Freelance marketers and consultants.
+- Digital marketing agencies.
+- SaaS founders and startup teams.
+- Small and medium-sized businesses.
+- Web designers and developers.
+- AI enthusiasts exploring practical agent workflows.
 
 ## Contributing
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for how to propose corrections or improvements. The license template is in [LICENSE](LICENSE); replace its copyright-holder placeholder before publishing under that license.
+Landing Page Intelligence is an open-source project, and contributions are welcome.
+
+You can contribute by:
+
+- Improving audit instructions.
+- Identifying gaps in the evaluation framework.
+- Suggesting additional audit criteria.
+- Improving scoring consistency.
+- Reporting issues or inaccurate recommendations.
+- Sharing practical use cases and feedback.
+
+Please read [CONTRIBUTING.md](CONTRIBUTING.md) before submitting a contribution.
+
+## Project Roadmap
+
+The project aims to evolve through practical usage, community feedback and continuous improvements.
+
+Potential future developments include:
+
+- More robust evidence-verification workflows.
+- Improved scoring consistency.
+- Additional industry-specific audit considerations.
+- Better integration with analytics and performance data.
+- Expanded reporting and benchmarking capabilities.
+
+Feature development will be guided by real-world use cases and community contributions.
+
+## Open Source
+
+This project is intended to be an open, collaborative resource for people working with landing pages, marketing and conversion optimisation.
+
+Explore the skills, try the framework, report issues and contribute improvements.
+
+**If you find this project useful, consider giving it a ⭐ on GitHub and sharing it with others.**
+
+---
+
+*Landing Page Intelligence — Evidence. Insight. Optimisation.*
